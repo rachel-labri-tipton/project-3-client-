@@ -1,5 +1,5 @@
 //this page is where users register
-
+import React from "react"
 function Register() {
     return (
         < div >
