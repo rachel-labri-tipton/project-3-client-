@@ -24,7 +24,7 @@ function RecipeCard() {
                 recipeData.map((recipe, idx) => (
             <>
                 <div key={idx} className="card">
-                    <img width="50" height="50" src={recipe.image} alt="recipe" className="card-img-top"/>
+                    <img width="100" height="100" src={recipe.image} alt="recipe" className="card-img-top"/>
                     <div className="card-body">
                         <h5 className="card-title">{recipe.recipeName}</h5>
                         <p className="card-text">{recipe.description}</p>
