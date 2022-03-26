@@ -7,20 +7,21 @@ import Navbar from "./components/common/Navbar"
 import About from "./components/common/About"
 // import AllRecipes from "./components/AllRecipes"
 // import { useState } from "react"
+import RecipeCard from "./components/recipe-components/RecipeCard"
 
 function App() {
 
   return (
     <div className="App">
       <Navbar />
-    <Router>
+      <RecipeCard />
+      <Router>
+        {/* <Route path="/" element={<Navbar />} /> */}
         <Routes>
-        <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
-          </Route>
         </Routes>
     </Router>
     </div>
