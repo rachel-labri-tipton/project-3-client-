@@ -8,9 +8,12 @@ import Navbar from "./components/common/Navbar"
 import About from "./components/common/About"
 import AllRecipes from "./components/recipe-components/AllRecipes"
 import IdeasAndSuggestions from "./components/recipe-components/IdeasAndSuggestions"
-import RecipeCard from "./components/recipe-components/RecipeCard"
+// import RecipeCard from "./components/recipe-components/RecipeCard"
 import RecipePage from "./components/recipe-components/RecipePage"
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function App() {
 
