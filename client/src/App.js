@@ -1,5 +1,5 @@
 import "./App.css"
-// import "./styles/custom.scss"
+// import "./styles/css/main.min.css"
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom"
 import Register from "./components/authentication/Register"
 import Login from "./components/authentication/Login"
