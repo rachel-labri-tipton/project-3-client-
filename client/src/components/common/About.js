@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 // import useContext from "react-bootstrap";
 // import brands, { faLinkedin } from '@fortawesome/fontawesome-free-brands'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -8,7 +8,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 function About() {
     return (
         <>
-            <br></br>
+            {/* <br></br>
             <h3>This is about</h3>
             <div className="columns is-centered">
                 <div className="column ">
@@ -39,9 +39,9 @@ function About() {
                         </h2>
                     </section>
                 </div>
-            </div>
-            <Card style={{ width: '200rem' }}>
-                {/* <Card.Body>
+            </div> */}
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
                     <Card.Text>
@@ -50,7 +50,7 @@ function About() {
                     </Card.Text>
                     <Card.Link href="#">Card Link</Card.Link>
                     <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body> */}
+                </Card.Body>
             </Card> 
         </>
     )
