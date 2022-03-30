@@ -2,8 +2,7 @@ import { useParams } from "react-router-dom"
 import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { DEV_API_URL } from "../../config"
-import CarouselIdeas from "./CarouselIdeas"
+import { API_URL } from "../../config"
 import RecipeCard from "./RecipeCard"
 
 function RecipePage() {
@@ -13,7 +12,7 @@ function RecipePage() {
     useEffect(() => {
         console.log("Running useEffect")
         const getData = async () => {
-            const res = await axios.get(`${DEV_API_URL}/recipes/${id}`)
+            const res = await axios.get(`${API_URL}/recipes/${id}`)
             setRecipeData(res.data)
             console.log(recipeData)
         }
@@ -21,7 +20,6 @@ function RecipePage() {
     }, [recipeData, id])
     console.log(recipeData)
     return (
-        <>
         <section>
             <div className="container pt-5 pb-5">
                 <h1 className="text-align-center pt-5 pb-5">{recipeData.recipeName}</h1>
@@ -51,8 +49,6 @@ function RecipePage() {
                 </div>
             </div>
         </section>
-            <CarouselIdeas />
-        </>
 
 
     )
