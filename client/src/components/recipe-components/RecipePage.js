@@ -3,6 +3,7 @@ import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { DEV_API_URL } from "../../config"
+import CarouselIdeas from "./CarouselIdeas"
 import RecipeCard from "./RecipeCard"
 
 function RecipePage() {
@@ -20,6 +21,7 @@ function RecipePage() {
     }, [recipeData, id])
     console.log(recipeData)
     return (
+        <>
         <section>
             <div className="container pt-5 pb-5">
                 <h1 className="text-align-center pt-5 pb-5">{recipeData.recipeName}</h1>
@@ -49,6 +51,8 @@ function RecipePage() {
                 </div>
             </div>
         </section>
+            <CarouselIdeas />
+        </>
 
 
     )

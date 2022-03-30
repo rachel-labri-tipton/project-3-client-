@@ -1,9 +1,11 @@
 //this page presents five different meal types: Breakfast, Lunch, Dinner, Snacks, Desserts
 //this page also contains the link to the Detox, which is a stretch goal
 import { Link } from "react-router-dom"
+import CarouselIdeas from "./CarouselIdeas"
 function IdeasAndSuggestions() {
     return (
-        <section className="bg-light text-dark text-start">
+        <>
+            <section className="bg-light text-dark text-start">
             <div className="container pt-5">
                 <div className="d-md-flex align-items-center justify-content-around">
                     <div>
@@ -13,9 +15,11 @@ function IdeasAndSuggestions() {
                     </div>
                     <img className="img-fluid py-5 px-5 d-sm-block" height="500" width="300" src="https://i.ibb.co/Fsx9BRW/NOURISHING-Black-Bean-Buddha-Bowl-with-Rice-Greens-Kraut-and-Lemon-Ginger-Tahini-Sauce-Simple-BIG-fl.jpg" alt="homepage food" />
                 </div>
-
             </div>
-        </section>)
+        </section>
+         <CarouselIdeas />
+        </>)
+
 }
 
 export default IdeasAndSuggestions

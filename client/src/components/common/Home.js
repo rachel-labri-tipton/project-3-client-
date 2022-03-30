@@ -7,7 +7,7 @@ function Home() {
 
     return (
         <>
-            <section className="bg-altlight text-dark text-start">
+            <section className="bg-light text-dark text-start">
                 <div className="container pt-5">
                     <div className="d-md-flex align-items-center justify-content-around">
                         <div>
