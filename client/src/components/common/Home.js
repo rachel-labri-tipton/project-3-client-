@@ -3,6 +3,7 @@ import React from "react"
 import RecipeCard from "../recipe-components/RecipeCard"
 import { Link } from "react-router-dom"
 
+
 function Home() {
 
     return (
@@ -11,7 +12,7 @@ function Home() {
                 <div className="container pt-5">
                     <div className="d-md-flex align-items-center justify-content-around">
                         <div>
-                            <h1>Simply Good <span className="text-primary">Food</span></h1>
+                            <h1 style={{ color: "mediumturquoise" }}>Simply Good <span style={{color: "black"}}>Food</span></h1>
                             <div><h2 className="lead py-5 w-50">Just two web developers bringing you their favorite healthy recipes without the hastle of scrolling through wordy blogs.</h2></div>
                             <Link to="/all-recipes"><button type="button" className="btn btn-outline-dark">Take Me to All Recipes</button></Link>
                         </div>

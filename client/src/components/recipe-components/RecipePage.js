@@ -21,6 +21,7 @@ function RecipePage() {
         return <p>Recipe Loading...</p>
     }
 
+
     return (
         <>
         <Card className="text-center">
@@ -63,6 +64,8 @@ function RecipePage() {
                 </Accordion>
             </Card.Body>
         </Card>
+
+    
     </>
     )
 }
