@@ -8,7 +8,7 @@ function IdeaCard() {
             recipeTypes.map(recipeType => {
                 return (
                     <>
-                        <Link to={`/menuideas/${recipeType}`}><Button variant="outline-dark">{recipeType}</Button></Link>
+                        <Link to={`/menuideas/${recipeType}`}><Button variant="outline-dark">{recipeType} Ideas</Button></Link>
                     </>
             )}
                     )

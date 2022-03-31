@@ -3,7 +3,9 @@ import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { DEV_API_URL } from "../../config"
-import { Accordion, Card, ListGroup } from "react-bootstrap"
+import { Accordion, Card, ListGroup, Button, Container } from "react-bootstrap"
+import ReviewForm from "./ReviewForm"
+import AccordionItem from "react-bootstrap/esm/AccordionItem"
 
 function RecipePage() {
     const { id } = useParams()
@@ -20,6 +22,7 @@ function RecipePage() {
     if (!recipeData) {
         return <p>Recipe Loading...</p>
     }
+
 
     return (
         <>
@@ -59,10 +62,43 @@ function RecipePage() {
                                 }
                             </ListGroup>
                         </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                            <Accordion.Header>Reviews</Accordion.Header>
+                            <Accordion.Body>
+                                <Container>
+                                    <p>There should be reviews here. </p>
+                                    {
+                                        recipeData.review.map(review => {
+                                            if (review===false) {
+                                                return ( 
+                                                    <p>There aren't any reviews for this recipe yet.</p>
+                                                )
+                                            } else {
+                                                return (
+                                                    <>
+                                                        <p>{review.text}</p>
+                                                        <p>{review.createdBy}</p>
+                                                    </>
+                                                )
+                                            }
+                                            
+                                        })
+                                    }
+                                </Container>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="3">
+                            <Accordion.Header>Leave a Review</Accordion.Header>
+                            <Accordion.Body>
+                                <ReviewForm />
+                            </Accordion.Body>
+                            </Accordion.Item>
+                    </Accordion>
             </Card.Body>
         </Card>
+
+    
     </>
     )
 }
