@@ -14,7 +14,7 @@ function RecipeCard() {
         const getData = async () => {
             const res = await axios.get(`${DEV_API_URL}/recipes`)
             setRecipeData(res.data)
-            console.log(recipeData)
+            console.log(res)
         }
         getData()
     }, [])
