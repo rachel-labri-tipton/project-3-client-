@@ -23,7 +23,7 @@ function NavbarLayout() {
         <Outlet />
         <Navbar bg="light" variant="light" sticky="bottom">
             <Container className="d-flex flex-column">
-                <p style={{"margin": "0 auto"}}><i class="fa fa-copyright" aria-hidden="true"></i> Recipes from <a href="https://minimalistbaker.com/" target="_blank" style={{textDecoration: 'none'}}>Minimalist Baker</a></p>
+                <p style={{"margin": "0 auto"}}><i className="fa fa-copyright" aria-hidden="true"></i> Recipes from <a href="https://minimalistbaker.com/" target="_blank" style={{textDecoration: 'none'}}>Minimalist Baker</a></p>
                 <Nav>
                     <Nav.Link href="/about">About Us</Nav.Link>
                 </Nav>
