@@ -1,43 +1,59 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: A MERN Stack App
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Simply Good Food (a MERN Stack App)
 
 ## Overview
 
-**You’ve come a long way, and it's time to show it.** This will be your most advanced project to date. It is **IMPORTANT** to note that when we say _advanced_, the project doesn't necessarily need to have lots more functionality.
+**Building upon Project 2, we built the backend for this project.** 
 
-**Remember:** simple code is stable code, so always favour refactoring and bug fixing over adding more functionality.
+**We built a full-stack application** by making our own backend and our own front-end.
+Simply Good Food is a clone of the website Minimalist Baker. 
 
-With this in mind, you need to be smart about how you plan, limit your project scope to be achievable (in terms of functionality) and focus on quality rather than quantity.
+**Focus:** Our group focused on simple stable code and tried to not wander too much into the weeds of super advanced functionality. 
 
-Make sure you review your project proposal with your instructor so you can make sure it's **something you can accomplish in the limited time we have**.
+To this end, we planned something manageable with a clear MVP and clear stretch goals.
+We were asked to focus on quality, not quantity, so as a group of two people (with day jobs), this is what drove our decision making. 
+
+We needed to be able to **accomplish something in the two weeks (30 class hrs)** we had. Also, compared to the other groups, we were a group of 2 and not a group of 3. 
 
 ---
 
 ## Technical Requirements
 
-You must:
+What we did:
 
-- **Build a full-stack application** by making your own backend and your own front-end
-- **Use an Express API** to serve your data from a Mongo database
-- **Consume your API with a separate front-end** built with React
-- **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
-- **Implement thoughtful user stories/wireframes** that are significant enough to help you know which features are core MVP and which you can cut
-- **Have a visually impressive design** to kick your portfolio up a notch and have something to wow future clients & employers. **ALLOW** time for this.
-- **Be deployed online** so it's publicly accessible.
+- **Built a full-stack application** by making our own backend and our own front-end
+- **Used an Express API** to serve our data from a Mongo database 
+- **Built a front-end that consumes our API** built with React and using the React-Bootstrap styling library
+- **It's a complete product** indivividuals are able to log in and leave a comment on recipes that they like. 
+- **Implemented thoughtful user wireframes** => We spent a decent amount of time on our planning and had clear stretch goals indicated in the wireframes. 
+- **Developed a visually impressive design** => We went for a fresh, minimalist approach, so not a lot of customizing with Bootstrap, but we looked at a few Squarespace designs and decided that less is more. 
+- **Deployed the app online** => Our app is publically accessible. 
 
 ---
 
 ## Necessary Deliverables
 
-- A **working app** hosted on the internet
+- A **working app** hosted on the internet: 
 - A **link to your hosted working app** in the URL section of your Github repo
 - A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
+
+
 - **A `readme.md` file** with:
   - An embedded screenshot of the app
+
   - Explanations of the **technologies** used
+  - 
   - A couple paragraphs about the **general approach you took**
+
+    
   - **Installation instructions** for any dependencies
+     Bootstrap-React
+     React-router-dom
+
   - Link to your **user stories/wireframes** – sketches of major views / interfaces in your application
+     
+    
   - Link to your **pitch deck/presentation** – documentation of your wireframes, user stories, and proposed architecture
+
   - Descriptions of any **unsolved problems** or **major hurdles** you had to overcome
 
 ---
@@ -59,8 +75,4 @@ You must:
 
 ---
 
-## Sign Off Requirments
 
-- **A Simple Wireframe** of the front end of the application, this should take into account the user flow through the app, eg, what can logged in users see/not see.
-- **A plan for what models/resources** that is needed for the back end application and what the relationships between these will be
-- **A great group name**
