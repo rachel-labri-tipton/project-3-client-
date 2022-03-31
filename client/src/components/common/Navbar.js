@@ -2,10 +2,22 @@ import { Link, Outlet } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import { useLocation} from "react-router-dom"
 
-import React from "react";
+
+import React, {useEffect, useState } from "react";
 
 function NavbarLayout() {
+
+    const location = useLocation()
+
+    const [isLoggedIn, setIsLoggedIn] = useState(undefined)
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!token ? false : true)
+    }, [location])
+
     return (
         <>
         <Navbar bg="dark" variant="dark">
@@ -16,7 +28,9 @@ function NavbarLayout() {
                     <Nav.Link href="/menuideas">Menu Ideas</Nav.Link>
                 </Nav>
                 <Nav className="d-flex">
-                        <Nav.Link href="/login"><span style={{ color:"gray"}}>Register / Log In</span></Nav.Link>
+
+                    <Nav.Link href="/login" disabled={isLoggedIn ? true : false} ><span className="text-secondary">{!isLoggedIn ? "Register / Log In" : "Signed In"}</span></Nav.Link>
+
                 </Nav>
             </Container>
         </Navbar>
