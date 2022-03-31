@@ -1,7 +1,9 @@
 //this page shows all recipes 
 import RecipeCard from "./RecipeCard"
 import { Link } from "react-router-dom"
-import{ Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
+import HomeFeaturedRecipes from "../common/HomeFeaturedRecipes"
+
 function AllRecipes() {
     return (
         <>
@@ -26,8 +28,9 @@ function AllRecipes() {
                         <div className="row row-cols-4 text-center align-items-center justify-content-between g-5">
                             <RecipeCard />
                         </div>
-                    </Container>
-                </section>
+                </Container>
+            </section>
+                
         </>
        
     )
