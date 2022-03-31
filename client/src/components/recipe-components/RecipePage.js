@@ -65,7 +65,6 @@ function RecipePage() {
         </Card>
     </>
     )
-
 }
 
 export default RecipePage 
