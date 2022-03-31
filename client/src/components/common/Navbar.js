@@ -16,7 +16,7 @@ function NavbarLayout() {
                     <Nav.Link href="/menuideas">Menu Ideas</Nav.Link>
                 </Nav>
                 <Nav className="d-flex">
-                    <Nav.Link href="/login"><span className="text-primary">Register / Log In</span></Nav.Link>
+                        <Nav.Link href="/login"><span style={{ color:"gray"}}>Register / Log In</span></Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
