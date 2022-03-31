@@ -21,7 +21,7 @@ function RecipesByType() {
     console.log(recipeData)
     return (<>
         <Container>
-            <h1 className="p-5 text-secondary">Simply Good <span className="text-dark"> {recipeType} </span> Ideas</h1>
+            <h1 className="p-5" style={{color:"thistle"}}>Simply Good <span style={{color:"black"}}> {recipeType} </span> Ideas</h1>
             <Link to="/menuideas/"><button type="button" className="btn btn-outline-dark">Take Me Back to Menu Ideas</button></Link>
         </Container>
         <div className="container py-5 w-75">

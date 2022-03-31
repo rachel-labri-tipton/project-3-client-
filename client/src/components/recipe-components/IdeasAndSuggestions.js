@@ -14,7 +14,7 @@ function IdeasAndSuggestions()
             <div className="container">
                 <div className="d-md-flex align-items-center justify-content-around">
                     <div>
-                            <h1 style={{ color: "gray" }}> Simply Good <span style={{ color: "black" }}>Menu  Ideas</span></h1>
+                            <h1 style={{ color: "turquoise" }}> Simply Good <span style={{ color: "black" }}>Menu  Ideas</span></h1>
                         <div><h2 className="lead py-5">Check out our recipes by category.</h2></div>
                         <Link to="/all-recipes"><button type="button" className="btn btn-outline-dark">Take Me Back to All Recipes</button></Link>
                     </div>

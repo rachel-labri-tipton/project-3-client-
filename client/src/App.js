@@ -10,6 +10,7 @@ import AllRecipes from "./components/recipe-components/AllRecipes"
 import IdeasAndSuggestions from "./components/recipe-components/IdeasAndSuggestions"
 import IdeaPage from "./components/recipe-components/IdeaPage"
 import RecipesByType from "./components/recipe-components/RecipesByType"
+import HomeFeaturedRecipes from "./components/common/HomeFeaturedRecipes"
 import RecipePage from "./components/recipe-components/RecipePage"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
