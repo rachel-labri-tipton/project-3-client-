@@ -6,21 +6,22 @@ import { DEV_API_URL } from "../../config"
 
 function RecipePage() {
     const { id } = useParams()
-    const [recipeData, setRecipeData] = useState([])
+    const [recipeData, setRecipeData] = useState(undefined)
 
     useEffect(() => {
-        console.log("Running useEffect")
         const getData = async () => {
             const res = await axios.get(`${DEV_API_URL}/recipes/${id}`)
             setRecipeData(res.data)
-            console.log(recipeData)
         }
         getData()
-    }, [recipeData, id])
-    console.log(recipeData)
+    }, [])
+
+    if (!recipeData) {
+        return <p>Recipe Loading...</p>
+    }
+    
     return (
         <>
-       
             <div className="container pt-5 pb-5">
                 <h1 className="text-align-center pt-5 pb-5">{recipeData.recipeName}</h1>
                 <img width="300" height="500" src={recipeData.image} alt="recipe" />

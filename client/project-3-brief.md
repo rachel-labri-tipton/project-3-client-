@@ -1,13 +1,15 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Simply Good Food (a MERN Stack App)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Simply Good Food 
+
+## (MERN Stack App)
 
 ## Overview
 
-**Building upon Project 2, we built the backend for this project.** 
+**Building upon Project 2, a React front-end app that consumed an API, we actually built the backend for this project.** 
 
 **We built a full-stack application** by making our own backend and our own front-end.
 Simply Good Food is a clone of the website Minimalist Baker. 
 
-**Focus:** Our group focused on simple stable code and tried to not wander too much into the weeds of super advanced functionality. 
+**Our Focus:** Our group focused on simple stable code and tried to not wander too much into the weeds of super advanced functionality, as tempting as that may have been. Instead of reinventing the wheel, our group was interested in understanding how the wheel works. 
 
 To this end, we planned something manageable with a clear MVP and clear stretch goals.
 We were asked to focus on quality, not quantity, so as a group of two people (with day jobs), this is what drove our decision making. 
@@ -20,21 +22,35 @@ We needed to be able to **accomplish something in the two weeks (30 class hrs)**
 
 What we did:
 
-- **Built a full-stack application** by making our own backend and our own front-end
-- **Used an Express API** to serve our data from a Mongo database 
-- **Built a front-end that consumes our API** built with React and using the React-Bootstrap styling library
-- **It's a complete product** indivividuals are able to log in and leave a comment on recipes that they like. 
+- **Built a full-stack application** by making our own backend and our own front-end.
+- **Used an Express API** to serve our data from a Mongo database.  
+- **Built a front-end that consumes our API** built with React and using the React-Bootstrap styling library.
+- **It's a complete product** => Users have access to recipes and cookbook suggestions and can log in and leave a comment on recipes that they like. 
 - **Implemented thoughtful user wireframes** => We spent a decent amount of time on our planning and had clear stretch goals indicated in the wireframes. 
-- **Developed a visually impressive design** => We went for a fresh, minimalist approach, so not a lot of customizing with Bootstrap, but we looked at a few Squarespace designs and decided that less is more. 
-- **Deployed the app online** => Our app is publically accessible. 
+- **Developed a visually impressive design** => We went for a fresh, minimalist approach, so not a lot of customizing with Bootstrap, but we looked at a few Squarespace designs and decided that there's nothing wrong going the "less is more" route. 
+- **Deployed the app online** => Here is a link to our app: 
+
+---
+
+## Project Strengths
+
+---
+
+## Project Challenges
+
+---
+
+## If we had more time...
 
 ---
 
 ## Necessary Deliverables
 
 - A **working app** hosted on the internet: 
-- A **link to your hosted working app** in the URL section of your Github repo
-- A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
+
+- A **link to your hosted working app** in the URL section of your Github repo. 
+
+- A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project. 
 
 
 - **A `readme.md` file** with:
