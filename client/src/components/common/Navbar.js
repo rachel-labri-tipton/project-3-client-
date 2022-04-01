@@ -4,7 +4,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { useLocation} from "react-router-dom"
 
-
 import React, {useEffect, useState } from "react";
 
 function NavbarLayout() {
@@ -29,7 +28,6 @@ function NavbarLayout() {
                 </Nav>
                 <Nav className="d-flex">
                     <Nav.Link href="/login" disabled={isLoggedIn ? true : false} ><span className="text-secondary">{!isLoggedIn ? "Register / Log In" : "Signed In"}</span></Nav.Link>
-
                 </Nav>
             </Container>
         </Navbar>
