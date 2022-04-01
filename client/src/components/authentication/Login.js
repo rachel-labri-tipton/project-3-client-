@@ -4,7 +4,7 @@ import { Form, Button, Tabs, Tab, Alert }from 'react-bootstrap'
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
-import { DEV_API_URL } from "../../config"
+import { API_URL } from "../../config"
 
 const Login = () => {
     const [formData, setFormData] = useState({})
@@ -21,7 +21,7 @@ const Login = () => {
     const onSubmit = async (e) => {
       e.preventDefault()
       try {
-        const res = await axios.post(`${DEV_API_URL}/login`, formData)
+        const res = await axios.post(`${API_URL}/login`, formData)
         if (res.data.token) {
           localStorage.setItem("token", res.data.token)
           navigate("/")
@@ -34,7 +34,7 @@ const Login = () => {
     const onSubmitRegister = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post(`${DEV_API_URL}/register`, formData)
+            const res = await axios.post(`${API_URL}/register`, formData)
             console.log(res.data)
 
           if (res.status === 201) {
