@@ -3,9 +3,8 @@ import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { DEV_API_URL } from "../../config"
-import { Accordion, Card, ListGroup, Button, Container } from "react-bootstrap"
+import { Accordion, Card, ListGroup, Container } from "react-bootstrap"
 import ReviewForm from "./ReviewForm"
-import AccordionItem from "react-bootstrap/esm/AccordionItem"
 
 function RecipePage() {
     const { id } = useParams()
@@ -26,20 +25,21 @@ function RecipePage() {
 
     return (
         <>
-        <Card className="text-center">
+        {/* <Card className="text-center" style={{background: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 80%)", "margin": "5% 18% 5% 18%"}}></Card> */}
+        <Card className="text-center" style={{background: "linear-gradient(to top, #dfe9f3 0%, white 100%)", "margin": "5% 18% 5% 18%"}}>
             <Card.Body>
-                <Card.Title>{recipeData.recipeName}</Card.Title>
-                <Card.Img src={recipeData.image} width="300" height="500"/>
-                <Accordion alwaysOpen flush>
+                <h1 style={{color:"dimgrey", marginTop:"5px"}}>{recipeData.recipeName}</h1>
+                <Card.Img src={recipeData.image} style={{width:"50%", height:"25vw", "objectFit": "contain", margin:"50px 0"}}/>
+                <Accordion alwaysOpen variant="flush" defaultActiveKey="0" className="text-center">
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header >Ingredients</Accordion.Header>
+                        <Accordion.Header>Ingredients</Accordion.Header>
                         <Accordion.Body>
-                            <ListGroup as="ol">
+                            <ListGroup as="ol" variant="flush" >
                                 {
                                     recipeData.recipeIngredients.map(ingredient => {
                                         return (
                                             <>
-                                            <ListGroup.Item as="li" key={ingredient}>{ingredient}</ListGroup.Item>
+                                            <ListGroup.Item as="li" style={{border: "None"}} key={ingredient}>{ingredient}</ListGroup.Item>
                                             </>
                                         )
                                     })
@@ -47,6 +47,8 @@ function RecipePage() {
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
+                </Accordion>
+                <Accordion alwaysOpen variant="flush" defaultActiveKey="1" style={{ "margin": "5% 0% 0% 0%"}}>
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Instructions</Accordion.Header>
                         <Accordion.Body>
@@ -55,7 +57,7 @@ function RecipePage() {
                                     recipeData.recipeInstructions.map(instruction => {
                                         return (
                                             <>
-                                            <ListGroup.Item as="li" key={instruction[0]}>{instruction}</ListGroup.Item>
+                                            <ListGroup.Item as="li" style={{border: "None"}} key={instruction[0]}>{instruction}</ListGroup.Item>
                                             </>
                                         )
                                     })
@@ -63,6 +65,8 @@ function RecipePage() {
                             </ListGroup>
                         </Accordion.Body>
                         </Accordion.Item>
+                </Accordion>
+                <Accordion alwaysOpen variant="flush" style={{ "margin": "5% 0% 0% 0%"}}>                    
                         <Accordion.Item eventKey="2">
                             <Accordion.Header>Reviews</Accordion.Header>
                             <Accordion.Body>
@@ -93,12 +97,10 @@ function RecipePage() {
                             <Accordion.Body>
                                 <ReviewForm />
                             </Accordion.Body>
-                            </Accordion.Item>
-                    </Accordion>
+                        </Accordion.Item>
+                </Accordion>
             </Card.Body>
         </Card>
-
-    
     </>
     )
 }
