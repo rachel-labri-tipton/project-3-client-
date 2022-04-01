@@ -3,56 +3,106 @@ import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { DEV_API_URL } from "../../config"
-import RecipeCard from "./RecipeCard"
+import { Accordion, Card, ListGroup, Button, Container } from "react-bootstrap"
+import ReviewForm from "./ReviewForm"
+import AccordionItem from "react-bootstrap/esm/AccordionItem"
 
 function RecipePage() {
     const { id } = useParams()
-    const [recipeData, setRecipeData] = useState([])
+    const [recipeData, setRecipeData] = useState(undefined)
 
     useEffect(() => {
-        console.log("Running useEffect")
         const getData = async () => {
             const res = await axios.get(`${DEV_API_URL}/recipes/${id}`)
             setRecipeData(res.data)
-            console.log(recipeData)
         }
         getData()
-    }, [recipeData, id])
-    console.log(recipeData)
+    }, [])
+
+    if (!recipeData) {
+        return <p>Recipe Loading...</p>
+    }
+
+
     return (
-        <section>
-            <div className="container pt-5 pb-5">
-                <h1 className="text-align-center pt-5 pb-5">{recipeData.recipeName}</h1>
-                <img width="300" height="500" src={recipeData.image} alt="recipe" />
-                <p></p>
-                <div className="row align-items-start">
-                    <div className="row g-1 align-items-center justify-content-center ">
-                        <h2 className="p-5">Ingredients</h2>
-                        {recipeData.recipeIngredients.map(ingredient => {
-                            return (
-                                <section className="container">
-                                    <p>{ingredient}</p>
-                                </section>
-                            )
-                        })}
-                        <h2 className="p-5">Instructions</h2>
-                        {recipeData.recipeInstructions.map(instructions => {
-                            return (
-                                <section className="container w-75 text-start-center">
-                                    <div className="w-50 p-1">
-                                        <p>{instructions} </p>
-                                    </div>
-                                </section>
-                            )
-                        })}
-                    </div>
-                </div>
-            </div>
-        </section>
+        <>
+        <Card className="text-center">
+            <Card.Body>
+                <Card.Title>{recipeData.recipeName}</Card.Title>
+                <Card.Img src={recipeData.image} width="300" height="500"/>
+                <Accordion alwaysOpen flush>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header >Ingredients</Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup as="ol">
+                                {
+                                    recipeData.recipeIngredients.map(ingredient => {
+                                        return (
+                                            <>
+                                            <ListGroup.Item as="li" key={ingredient}>{ingredient}</ListGroup.Item>
+                                            </>
+                                        )
+                                    })
+                                }
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>Instructions</Accordion.Header>
+                        <Accordion.Body>
+                        <ListGroup as="ol">
+                                {
+                                    recipeData.recipeInstructions.map(instruction => {
+                                        return (
+                                            <>
+                                            <ListGroup.Item as="li" key={instruction[0]}>{instruction}</ListGroup.Item>
+                                            </>
+                                        )
+                                    })
+                                }
+                            </ListGroup>
+                        </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                            <Accordion.Header>Reviews</Accordion.Header>
+                            <Accordion.Body>
+                                <Container>
+                                    <p>There should be reviews here. </p>
+                                    {
+                                        recipeData.review.map(review => {
+                                            if (review===false) {
+                                                return ( 
+                                                    <p>There aren't any reviews for this recipe yet.</p>
+                                                )
+                                            } else {
+                                                return (
+                                                    <>
+                                                        <p>{review.text}</p>
+                                                        <p>{review.createdBy}</p>
+                                                    </>
+                                                )
+                                            }
+                                            
+                                        })
+                                    }
+                                </Container>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="3">
+                            <Accordion.Header>Leave a Review</Accordion.Header>
+                            <Accordion.Body>
+                                <ReviewForm />
+                            </Accordion.Body>
+                            </Accordion.Item>
+                    </Accordion>
+            </Card.Body>
+        </Card>
 
-
+    
+    </>
     )
-
 }
 
 export default RecipePage 
+
+

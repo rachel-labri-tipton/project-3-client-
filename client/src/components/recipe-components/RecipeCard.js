@@ -14,18 +14,18 @@ function RecipeCard() {
         const getData = async () => {
             const res = await axios.get(`${DEV_API_URL}/recipes`)
             setRecipeData(res.data)
-            console.log(recipeData)
+            console.log(res)
         }
         getData()
-    }, [recipeData])
+    }, [])
    
     return (
     <>
         {
                 recipeData.map((recipe, idx) => (
-                    <div className="col col-lg-4">
-                            <div key={idx} className="card px-4 py-4">
-                                <img width="150" height="250" src={recipe.image} alt="recipe" className="card-img-top img-fluid" />
+                    <div className="col col-lg-4" key={idx} >
+                            <div className="card px-4 py-4">
+                                <img width="150" height="250" src={recipe.image} alt="recipe" className="card-img-top" />
                                 <div className="card-body">
                                     <h5 className="card-title">{recipe.recipeName}</h5>
                                     <p className="card-text">{recipe.description}</p>
