@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { API_URL } from "../../config"
+import { DEV_API_URL } from "../../config"
 import { Card, CardGroup, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
@@ -11,7 +11,7 @@ function HomeFeaturedRecipes() {
 
     useEffect(() => {
         const getData = async () => {
-            const res = await axios.get(`${API_URL}/recipes`)
+            const res = await axios.get(`${DEV_API_URL}/recipes`)
             setRecipeData(res.data)
             const newArray = []
             for (var i = 0; i < 6; i++) {
