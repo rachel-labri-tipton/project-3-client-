@@ -34,7 +34,7 @@ const Login = () => {
     const onSubmitRegister = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post(`${API_URL}/register`, formData)
+            const res = await axios.post(`${DEV_API_URL}/register`, formData)
             console.log(res.data)
 
           if (res.status === 201) {
