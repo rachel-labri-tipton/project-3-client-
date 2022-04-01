@@ -4,7 +4,7 @@ import { Container, CardGroup, CardImg } from "react-bootstrap"
 import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { DEV_API_URL } from "../../config"
+import { API_URL } from "../../config"
 
 function RecipesByType() {
     const { recipeType } = useParams()
@@ -13,7 +13,7 @@ function RecipesByType() {
     useEffect(() => {
         console.log("Running useEffect")
         const getData = async () => {
-            const res = await axios.get(`${DEV_API_URL}/recipes/recipe-type/${recipeType}`)
+            const res = await axios.get(`${API_URL}/recipes/recipe-type/${recipeType}`)
             setRecipeData(res.data)
         }
         getData()

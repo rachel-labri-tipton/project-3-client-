@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { DEV_API_URL } from "../../config"
+import { API_URL } from "../../config"
 import { Accordion, Card, ListGroup, Button, Container } from "react-bootstrap"
 import ReviewForm from "./ReviewForm"
 import AccordionItem from "react-bootstrap/esm/AccordionItem"
@@ -13,7 +13,7 @@ function RecipePage() {
 
     useEffect(() => {
         const getData = async () => {
-            const res = await axios.get(`${DEV_API_URL}/recipes/${id}`)
+            const res = await axios.get(`${API_URL}/recipes/${id}`)
             setRecipeData(res.data)
         }
         getData()

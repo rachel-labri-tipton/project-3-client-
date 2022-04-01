@@ -3,7 +3,7 @@
 import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { DEV_API_URL } from "../../config"
+import { API_URL } from "../../config"
 import { Link } from "react-router-dom"
 
 function RecipeCard() {
@@ -12,7 +12,7 @@ function RecipeCard() {
     useEffect(() => {
         console.log("Running useEffect")
         const getData = async () => {
-            const res = await axios.get(`${DEV_API_URL}/recipes`)
+            const res = await axios.get(`${API_URL}/recipes`)
             setRecipeData(res.data)
             console.log(res)
         }
