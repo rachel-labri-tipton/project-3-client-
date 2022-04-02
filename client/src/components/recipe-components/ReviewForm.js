@@ -30,6 +30,9 @@ function ReviewForm () {
             const res = await axios.post(`${DEV_API_URL}/recipes/${id}/review`, formData, config)
           if (res.status === 200) {
               setSuccessMessage(true)
+              if (errorMessage) {
+                  setErrorMessage(null)
+              }
           }
         } catch (e) {
           setErrorMessage(e.response.data.message)
@@ -42,7 +45,7 @@ function ReviewForm () {
                 {successMessage && <Alert variant="success" style={{"margin": "5% 30% 10% 30%"}}>"Review successfully submitted!!"</Alert>}
                 <Form onSubmit={onSubmit} >
                     <Form.Group controlId="form.Textarea" key={3} hidden={successMessage ? true : false} >
-                        <Form.Control key={3.2} name="review" placeholder="Please tell us what you think.." as="textarea" rows={3} onChange={onChange} />
+                        <Form.Control key={3.2} name="text" placeholder="Please tell us what you think.." as="textarea" rows={3} onChange={onChange} />
                     </Form.Group>
                     <Button variant="primary" type="submit" style={{margin:"10px 0 0 0"}} hidden={successMessage ? true : false}>
                         Submit
