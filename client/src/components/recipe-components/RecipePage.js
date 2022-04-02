@@ -3,12 +3,15 @@ import React from "react"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { DEV_API_URL } from "../../config"
-import { Accordion, Card, ListGroup, Button, Container } from "react-bootstrap"
+import { Accordion, Card, ListGroup, Container } from "react-bootstrap"
 import ReviewForm from "./ReviewForm"
-import AccordionItem from "react-bootstrap/esm/AccordionItem"
 
 function RecipePage() {
+
     const { id } = useParams()
+
+    const status = localStorage.getItem("token") ? false : true;
+
     const [recipeData, setRecipeData] = useState(undefined)
 
     useEffect(() => {
@@ -23,23 +26,24 @@ function RecipePage() {
         return <p>Recipe Loading...</p>
     }
 
-
     return (
         <>
-        <Card className="text-center">
+        <Card className="text-center" style={{background: "linear-gradient(to top, #dfe9f3 0%, white 100%)", "margin": "5% 18% 5% 18%"}}>
             <Card.Body>
-                <Card.Title>{recipeData.recipeName}</Card.Title>
-                <Card.Img src={recipeData.image} width="300" height="500"/>
-                <Accordion alwaysOpen flush>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header >Ingredients</Accordion.Header>
-                        <Accordion.Body>
-                            <ListGroup as="ol">
+                <h1 style={{color:"dimgrey", marginTop:"5px"}}>{recipeData.recipeName}</h1>
+                <Card.Img src={recipeData.image} style={{width:"50%", height:"25vw", "objectFit": "contain", margin:"50px 0"}}/>
+                <Accordion alwaysOpen variant="flush" defaultActiveKey="0" className="text-center" key={"a1"}>
+                    <Accordion.Item eventKey="0" key={"aI1"}>
+                        <Accordion.Header key={"aH1"}><h4 style={{ color: "dimgrey" }}>Ingredients</h4></Accordion.Header>
+                        <Accordion.Body key={"aB1"}>
+                            <ListGroup as="ol" variant="flush" key="l0">
                                 {
+
                                     recipeData.recipeIngredients.map(ingredient => {
+                                    
                                         return (
                                             <>
-                                            <ListGroup.Item as="li" key={ingredient}>{ingredient}</ListGroup.Item>
+                                            <ListGroup.Item as="li" style={{border: "None"}} key={new Date().getTime()}>{ingredient}</ListGroup.Item>
                                             </>
                                         )
                                     })
@@ -47,15 +51,17 @@ function RecipePage() {
                             </ListGroup>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header>Instructions</Accordion.Header>
-                        <Accordion.Body>
-                        <ListGroup as="ol">
+                </Accordion>
+                <Accordion alwaysOpen variant="flush" defaultActiveKey="1" style={{ "margin": "5% 0% 0% 0%"}} key={"a2"}>
+                    <Accordion.Item eventKey="1" key={"aI2"}>
+                        <Accordion.Header key={"aH2"}><h4 style={{ color: "dimgrey" }}>Instructions</h4></Accordion.Header>
+                        <Accordion.Body key={"aB2"}>
+                        <ListGroup as="ol" key="l1">
                                 {
                                     recipeData.recipeInstructions.map(instruction => {
                                         return (
                                             <>
-                                            <ListGroup.Item as="li" key={instruction[0]}>{instruction}</ListGroup.Item>
+                                            <ListGroup.Item as="li" style={{border: "None"}} key={new Date().getTime()}>{instruction}</ListGroup.Item>
                                             </>
                                         )
                                     })
@@ -63,46 +69,35 @@ function RecipePage() {
                             </ListGroup>
                         </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Reviews</Accordion.Header>
-                            <Accordion.Body>
+                </Accordion>
+                <Accordion alwaysOpen className="accordion accordion-flush" style={{ "margin": "5% 0% 0% 0%"}} key={"a3"}>                    
+                        <Accordion.Item eventKey="2" key={"aI3"}>
+                            <Accordion.Header key={"aH3"}><h5 style={{ color: "dimgrey" }}>Reviews</h5></Accordion.Header>
+                            <Accordion.Body key={"aB3"}>
                                 <Container>
-                                    <p>There should be reviews here. </p>
+                                    <p className="text-align-start"><h6>What people are saying about {recipeData.recipeName}:</h6></p>
                                     {
-                                        recipeData.review.map(review => {
-                                            if (review===false) {
-                                                return ( 
-                                                    <p>There aren't any reviews for this recipe yet.</p>
-                                                )
-                                            } else {
-                                                return (
+                                        recipeData.review.map(review => (
                                                     <>
-                                                        <p>{review.text}</p>
-                                                        <p>{review.createdBy}</p>
+                                                <p>{review.text}</p>
                                                     </>
-                                                )
-                                            }
-                                            
-                                        })
+                                            )
+                                        )
                                     }
                                 </Container>
                             </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item eventKey="3">
-                            <Accordion.Header>Leave a Review</Accordion.Header>
-                            <Accordion.Body>
+                        <Accordion.Item eventKey="3" key={"aI4"} hidden={status}>
+                            <Accordion.Header key={"aH4"}><h5 style={{ color: "dimgrey" }}>Leave a Review</h5></Accordion.Header>
+                            <Accordion.Body  key={"aB4"}>
                                 <ReviewForm />
                             </Accordion.Body>
-                            </Accordion.Item>
-                    </Accordion>
+                        </Accordion.Item>
+                </Accordion>
             </Card.Body>
         </Card>
-
-    
     </>
     )
 }
 
 export default RecipePage 
-
-
