@@ -2,7 +2,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import HomeFeaturedRecipes from "./HomeFeaturedRecipes"
-import RecipeCard from "../recipe-components/RecipeCard"
 import { Container } from "react-bootstrap"    
 
 
