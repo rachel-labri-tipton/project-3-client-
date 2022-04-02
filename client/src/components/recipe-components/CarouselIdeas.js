@@ -8,24 +8,22 @@ function CarouselIdeas() {
                 <Carousel.Item className="bg-dark">
                     <img 
                         className="img-responsive center-block" width={500} height={400}
-                        src="https://i.ibb.co/Wt3c7mw/Instant-Pot-Banana-Bread-Steel-Cut-Oats-Fast-easy-BIG-banana-bread-flavor-oats-bananabread-instantpo.jpg"
+                        src="https://i.ibb.co/kczrxYz/INCREDIBLE-5-Ingredient-Banana-Egg-Pancakes-Fluffy-dairy-free-grain-free-no-sugar-added-SO-satisfyin.jpg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 text="dark" >Banana Bread Steel Cut Oats</h3>
-                        <p>You've never tasted steel cut oats this good.</p>
+                        <h3 text="dark" >Banana Egg Pancakes</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="bg-light">
                     <img  
                         className="img-responsive center-block" width={500} height={400}
-                        src="https://i.ibb.co/kczrxYz/INCREDIBLE-5-Ingredient-Banana-Egg-Pancakes-Fluffy-dairy-free-grain-free-no-sugar-added-SO-satisfyin.jpg"
+                        src="https://minimalistbaker.com/wp-content/uploads/2019/12/Massaged-Kale-Salad-SQUARE.jpg"
                         alt="Second slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>5 Ingredient Banana Egg Pancakes</h3>
-                        <p>Who needs pancakes made with flour when you have bananas?</p>
+                        <h3>Massaged Kale Salad</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="bg-dark">
@@ -37,7 +35,39 @@ function CarouselIdeas() {
 
                     <Carousel.Caption>
                         <h3>Peanut Butter Overnight Oats</h3>
-                        <p>Don't like hot oats, we've got you covered with our overnight oats.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="bg-light">
+                    <img
+                        className="img-responsive center-block" width={500} height={400}
+                        src="https://minimalistbaker.com/wp-content/uploads/2018/03/Hummus-from-Scratch-SQUARE.jpg"
+                        alt="Fourth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Hummus from Scratch</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="bg-dark">
+                    <img
+                        className="img-responsive center-block" width={500} height={400}
+                        src="https://i.ibb.co/vzsGszm/HEALTHY-Spanish-Quinoa-Stuffed-Peppers-10-ingredients-packed-with-protein-and-fiber-and-SO-flavorful.jpg"
+                        alt="Fifth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Mexican Quinoa Stuffed Peppers</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="bg-light">
+                    <img
+                        className="img-responsive center-block" width={500} height={400}
+                        src="https://i.ibb.co/NVXN82f/Vegan-Funfetti-Cupcakes-One-bowl-10-ingredients-SUPER-delicious-cupcakes-vegan.webp"
+                        alt="Sixth slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Vegan Funfetti Cupcakes</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
