@@ -28,7 +28,6 @@ function NavbarLayout() {
                     <Nav.Link href="/menuideas">Menu Ideas</Nav.Link>
                 </Nav>
                 <Nav className="d-flex">
-
                     <Nav.Link href="/login" disabled={isLoggedIn ? true : false} ><span className="text-secondary">{!isLoggedIn ? "Register / Log In" : "Signed In"}</span></Nav.Link>
 
                 </Nav>
