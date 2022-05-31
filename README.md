@@ -5,6 +5,8 @@
 **We built a full-stack application** by making our own backend and our own front-end.
 Simply Good Food is a clone of the website Minimalist Baker (https://minimalistbaker.com/). 
 
+![](./client/src/images/project_3_homepage.gif)
+
 ## Goal 
 A group project to design a MERN Stack application. 
 
@@ -51,7 +53,7 @@ What we did based on project specifications for our MVP:
 
 ### Deployed version 
 
-**[](https://willowy-biscotti-b0cdbb.netlify.app/)**
+**[Simply Good Food](https://willowy-biscotti-b0cdbb.netlify.app/)**
 
 
 ## Planning 
