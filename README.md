@@ -5,6 +5,8 @@
 **We built a full-stack application** by making our own backend and our own front-end.
 Simply Good Food is a clone of the website Minimalist Baker (https://minimalistbaker.com/). 
 
+*Here's a quick look at our homepage:*
+
 ![](./client/src/images/project_3_homepage.gif)
 
 ## Goal 
@@ -46,8 +48,6 @@ What we did based on project specifications for our MVP:
 ## Simply Good Food 
 
 **Our Focus:** Our group focused on simple stable code and tried to not wander too much into the weeds of super advanced functionality, as tempting as that may have been. Instead of reinventing the wheel, our group was interested in understanding how the wheel works. 
-
-*Here's a sneak peak of our project:*
 
 ![](./client/src/images/project_3_homepage.gif)
 
