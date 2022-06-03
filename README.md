@@ -57,7 +57,7 @@ What we did based on project specifications for our MVP:
 
 
 ## Planning 
-To this end, we planned something manageable with a clear MVP and clear stretch goals.
+To this end, we planned something manageable with a clear MVP and clear stretch goals. We put a Trello Board in place and had daily standups before joint work sessions as well as checking in regularly on Slack when our "dev" git branch was updated. 
 We were asked to focus on quality, not quantity, so as a group of two people (with day jobs), this is what drove our decision making. We needed to be able to **accomplish something in the two weeks (30 class hrs)** we had. Also, compared to the other groups, we were a group of 2 and not a group of 3. 
 
 We used Excalidraw for wireframing: 
