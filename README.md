@@ -280,7 +280,7 @@ In both cases, running the deployment via the command line turned out to be the 
 - Polishing the design - our recipe cards on some of the pages just don't look centred or like they have the right shape. 
 - Adding more front-end CRUD functionality, like user sign-out and maybe the possibility for users to post a recipe from the front end. Since Emily had taken on this responsibility on our Trello board, I left it to her to work on and probably could have jumped in a little sooner to ask if she needed help since she was working so much on the web scraping. 
 
-Overall a super fun and successful project.
+*Overall a super fun and successful project with a great teammate!*
 
 
 
