@@ -40,8 +40,8 @@ What we did based on project specifications for our MVP:
 - **Made a complete product** => Users have access to recipes and cookbook suggestions and can log in and leave a comment on recipes that they like. 
 - **Implemented thoughtful user wireframes** => We spent a decent amount of time on our planning and had clear stretch goals indicated in the wireframes. Here is a link to our design: **[](https://excalidraw.com/#room=9c88b5ae7986d9bfcb56,LfIO3eDConef6D-iEdjaFw)**
 - **Developed a visually impressive design** => We went for a fresh, minimalist approach, so not a lot of customising with React-Bootstrap, but we looked at a few Squarespace designs and decided that there's nothing wrong with going the "less is more" route. 
-- **Deployed an API** => Here is a link to the api: **[](https://simply-good-food.herokuapp.com/)**
-- **Deployed the app online** => Here is a link to our app: **[](https://willowy-biscotti-b0cdbb.netlify.app/)**
+- **Deployed an API** => Here is a link to the api: **(https://simply-good-food.herokuapp.com/)**
+- **Deployed the app online** => Here is a link to our app: **(https://willowy-biscotti-b0cdbb.netlify.app/)**
 - **Extra's we add** - Emilie, my teammate is a data scientist and was able to use Selenium/BeautifulSoup to webscrape recipes from the Minimalist Baker website. This allowed us to import a lot of data in a short amount of time into our database.
 
 # Simply Good Food 
