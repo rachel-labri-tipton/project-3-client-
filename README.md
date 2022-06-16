@@ -1,8 +1,8 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Simply Good Food 
 
-Building upon Project 2, which was a React front-end app that consumed an API, we got to build the backend for this project.
+Building upon Project 2, which was a React frontend app that consumed an API, we got to build the backend for this project.
 
-**We built a MERN Stack application** by making our own backend and our own front-end. Simply Good Food is a clone of the website Minimalist Baker (https://minimalistbaker.com/). 
+**We built a MERN Stack application** by making our own backend and our own frontend. Simply Good Food is a clone of the website Minimalist Baker (https://minimalistbaker.com/). 
 
 *Here's a quick look at our Homepage:*
 
@@ -22,7 +22,7 @@ Two weeks (30 course hours)
 - MongoDB / mongoose
 - Insomnia 
 - React 
-- React Router/Dom
+- React Router
 - React-Bootstrap 
 - VSCode
 - Git/GitHub
@@ -40,7 +40,7 @@ What we did based on project specifications for our MVP:
 - **Made a complete product** => Users have access to recipes and cookbook suggestions and can log in and leave a comment on recipes that they like. 
 - **Implemented thoughtful user wireframes** => We spent a decent amount of time on our planning and had clear stretch goals indicated in the wireframes. Here is a link to our design: **[](https://excalidraw.com/#room=9c88b5ae7986d9bfcb56,LfIO3eDConef6D-iEdjaFw)**
 - **Developed a visually impressive design** => We went for a fresh, minimalist approach, so not a lot of customising with React-Bootstrap, but we looked at a few Squarespace designs and decided that there's nothing wrong with going the "less is more" route. 
-- **Deployed an API** => Here is a link to the api: **(https://simply-good-food.herokuapp.com/)**
+- **Deployed an API** => Here is a link to the API: **(https://simply-good-food.herokuapp.com/)**
 - **Deployed the app online** => Here is a link to our app: **(https://willowy-biscotti-b0cdbb.netlify.app/)**
 - **Extra's we add** - Emilie, my teammate is a data scientist and was able to use Selenium/BeautifulSoup to webscrape recipes from the Minimalist Baker website. This allowed us to import a lot of data in a short amount of time into our database.
 
@@ -242,7 +242,7 @@ And we have a carousel which I found easier to implement than I thought it would
 ![](./client/src/images/project-3-carousel-gif.gif)
 
 
-### Deployment 
+## Deployment 
 
 It was really important to me that by the Tuesday before we presented that our backend was deployed on HerokuApp. As our instructor had said, it might be the case that it took a little over 2 hours to deploy to Heroku. 
 
