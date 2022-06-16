@@ -1,12 +1,12 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Simply Good Food 
 
-Building upon Project 2, a React front-end app that consumed an API, we got to build the backend for this project.
+Building upon Project 2, which was a React front-end app that consumed an API, we got to build the backend for this project.
 
 **We built a MERN Stack application** by making our own backend and our own front-end. Simply Good Food is a clone of the website Minimalist Baker (https://minimalistbaker.com/). 
 
-*Here's a quick look at our All Recipes Page:*
+*Here's a quick look at our Homepage:*
 
-![](./client/src/images/project-3-all-recipes.gif)
+![](./client/src/images/project-3-SGF-homepage.gif)
 
 ## Goal 
 A group project to design a MERN Stack application. 
@@ -167,7 +167,7 @@ router.route("/login")
 
 ```
 
-Working with the controllers, I explored some of the functions that mongoose offers out of the box. For example, in the case of updating a recipe, I used findOneAndUpdate(). 
+Working with the controllers, I explored some of the functions that Mongoose offers out of the box. For example, in the case of updating a recipe, I used findOneAndUpdate(). 
 
 ```
 
@@ -193,7 +193,6 @@ async function update(req, res, next) {
 ### Front end noteworthy features 
 
 I worked a lot on the styling in the front end after I figured out how to use React-Bootstrap. I'm really pleased with the professional look of the layout. 
-
 
 
 One of the components I worked on in the front end that proved a little tricky was figuring out how to get a random set of recipes to render on the Home Page. The way I did this was by fetching all the recipes and then writing a function that randomly selected 6 recipes. 
