@@ -48,9 +48,9 @@ What we did based on project specifications for our MVP:
 
 **Our Focus:** Our group focused on simple stable code and tried to not wander too much into the weeds of super advanced functionality, as tempting as that may have been. Instead of reinventing the wheel, our group was interested in understanding how the wheel works. 
 
-![](./client/src/images/project_3_homepage.gif)
+![](./client/src/images/project-3-homepage.gif)
 
-### I invite you to check out the deployed version here: 
+#### I invite you to check out the deployed version here: 
 
 **[Simply Good Food](https://willowy-biscotti-b0cdbb.netlify.app/)**
 
