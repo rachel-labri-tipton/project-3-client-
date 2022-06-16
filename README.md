@@ -250,7 +250,7 @@ Front-end deployment was on Netlify, and I spent 3 hours getting our project dep
 
 In both cases, running the deployment via the command line turned out to be the most effective approach as opposed to deploying through the Netlify website or the Heroku website. 
 
-# Wins
+## Wins
 
 - Efficient collaboration in the following areas: project & time management, code sharing & version control. Both of us were upfront about what hadn't worked for us in Project 2 and did a good job of communicating our communication and working styles. Work session stand-ups helped keep this communication going. Spending time setting up our individual GitHub branches with a "dev" branch we were regularly pushing to and pulling from worked really well. It wasn't until deployment that we pushed our dev branch code to the main branch. 
 - Front and backends were fully deployed for the project presentation. 
@@ -259,12 +259,12 @@ In both cases, running the deployment via the command line turned out to be the 
 
 ---
 
-# Challenges
+## Challenges
 
 - Determining & effectively utilising front end libraries like React-Bootstrap. Since the styling library was new to both me and Emily, I started using Bootstrap before I knew that React-Bootstrap existed. Regardless, we came up with a design that looks good. 
 - Web-Scraping recipe data from the website we cloned took Emily a bit of time because the website we were using had a lot of pop-ups. I then had to edit the resulting JSON file before making a post request to our database. 
 
-# Key learnings
+## Key learnings
 
 - Spent time discovering the React-Bootstrap library
 - Being more comfortable using Git and GitHub because my teammate was super supportive and answered a lot of questions
@@ -272,7 +272,7 @@ In both cases, running the deployment via the command line turned out to be the 
 - The work involved in planning and building an API
 
 
-# If we had more time...
+## If we had more time...
 
 - Adding the sign out functionality & more pages, like a page of favourite cookbooks that Emily and I suggest. 
 - I also wanted to create a page for people who wanted to do a detox. This would have required a Detox model in the backend, which we didn't create since we didn't know if we'd have time to implement it. 
